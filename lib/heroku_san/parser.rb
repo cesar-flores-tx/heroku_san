@@ -46,7 +46,7 @@ module HerokuSan
       private
 
     def parse_yaml(config_file)
-      if File.exists?(config_file)
+      if File.exist?(config_file)
         if defined?(ERB)
           YAML.load(ERB.new(File.read(config_file)).result)
         else

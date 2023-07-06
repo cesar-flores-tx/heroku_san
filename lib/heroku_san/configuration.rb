@@ -37,7 +37,7 @@ module HerokuSan
 
     def generate_config
       # TODO: Convert true/false returns to success/exception
-      if File.exists?(config_file)
+      if File.exist?(config_file)
         false
       else
         FileUtils.cp(template, config_file)
